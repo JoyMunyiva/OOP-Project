@@ -10,7 +10,7 @@ public class Student {
          connection = jdbc.getConnection();
 
          try {
-             String query = "CREATE TABLE Attendance(unitId VARCHAR(10) PRIMARY KEY,studentId SERIAL,pAbsence VARCHAR(10),attendanceCount INT,semester INT)";
+             String query = "CREATE TABLE Student(studentId SERIAL PRIMARY KEY,fName TEXT,lName TEXT, sex CHAR, dob DATE, email VARCHAR(50), facultyId VARCHAR(10), courseId VARCHAR(10), no_of_units INT)";
              statement = connection.createStatement();
              statement.executeUpdate(query);
              System.out.println("Attendance table created successfully!");
